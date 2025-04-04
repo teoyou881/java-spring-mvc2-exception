@@ -24,4 +24,9 @@ public class ServletExController {
   public void error500(HttpServletResponse response) throws IOException {
     response.sendError(500);
   }
+
+  @GetMapping("/error-illegalArgument")
+  public void errorIllegalArgument(HttpServletResponse response) throws IOException {
+    throw new IllegalArgumentException();
+  }
 }
